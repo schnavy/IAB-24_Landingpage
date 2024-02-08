@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Syncro Mono';
+    src: url('assets/fonts/Syncro-MonoItalic.woff2') format('woff2'),
+    url('assets/fonts/Syncro-MonoItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Syncro Mono';
+    src: url('assets/fonts/Syncro-Mono.woff2') format('woff2'),
+    url('assets/fonts/Syncro-Mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Syncro';
+    src: url('assets/fonts/Syncro-Book.woff2') format('woff2'),
+    url('assets/fonts/Syncro-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Syncro';
+    src: url('assets/fonts/Syncro-Italic.woff2') format('woff2'),
+    url('assets/fonts/Syncro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body, html {
+    font-family: 'Syncro', serif;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-style: normal;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #848585;
+}
+
+.gradient-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    transition: background 0.5s; /* Smooth transition for the gradient change */
+}
+
+.title-text {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+            "t-11 t-12 t-13 hgb-date"
+            ".    t-21 t-22 hgb-date"
+            ".     t-31 t-32 hgb-date";
+    justify-content: space-between;
+}
+
+.t-11 {
+    grid-area: t-11;
+}
+
+.t-12 {
+    grid-area: t-12;
+}
+
+.t-13 {
+    grid-area: t-13;
+}
+
+.t-21 {
+    grid-area: t-21;
+}
+
+.t-22 {
+    grid-area: t-22;
+}
+
+.t-31 {
+    grid-area: t-31;
+}
+
+.t-32 {
+    grid-area: t-32;
+}
+
+.hgb-date {
+    grid-area: hgb-date;
+}
+
+.lower-text {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    display: none;
+    justify-content: space-between;
+}
+
+#svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 700px;
+}
+
+#svg-container img{
+    opacity: 0;
+    transform: translateY(20px);
+    transition-delay: 1000ms;
+    transition: all 1000ms ease-out;
+}
+#svg-container img.visible {
+    opacity: 1;
+    transition-delay: 1000ms;
+    transform: translateY(0px);
+    transition: all 1000ms ease-out;
+}
+
+#svg-container-mobile {
+    display: none;
+    z-index: 10000;
+    padding: 1rem;
+}
+
+#svg-container-infos img {
+    position: absolute;
+    max-height: 500px;
+    opacity: 0;
+    transform: translateY(-5px) scale(150%);
+    transition: all 400ms ease-out;
+}
+#svg-container-infos img.visible {
+    opacity: 1;
+    transform: translateY(0) scale(150%);
+    transition: all 400ms ease-out;
+}
+
+.logo {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    align-items: end;
+    justify-content: space-between;
+    min-height: 40px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+@media (max-width: 1000px) {
+    .title-text {
+        grid-template-areas:
+                "t-11 t-12 t-13"
+                ".    t-21 t-22"
+                ".     t-31 t-32";
+    }
+
+    .lower-text {
+        display: flex;
+        bottom: calc(40px + 2rem);
+    }
+
+    .hgb-date {
+        display: none;
+    }
+
+    #svg-container {
+        width: 400px;
+    }
+
+    #svg-container-infos img {
+        position: absolute;
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    body, html {
+        font-size: 80%;
+    }
+
+    .title-text {
+        grid-template-areas:
+            "t-11 t-12 t-13"
+            ".    t-21 t-21"
+            ".    .    t-22"
+            ".    t-31 t-31"
+            ".    .    t-32";
+    }
+
+    .lower-text {
+        display: flex;
+        bottom: calc(20px + 2rem);
+    }
+
+    #svg-container {
+        display: none;
+    }
+
+    #svg-container-mobile {
+        display: block;
+    }
+
+    #svg-container-infos img {
+        position: absolute;
+        max-height: 200px;
+    }
+
+    .logo img {
+        height: 20px;
+        width: auto;
+    }
+}

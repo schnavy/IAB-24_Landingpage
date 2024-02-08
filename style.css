@@ -162,7 +162,15 @@ h1 {
     width: auto;
 }
 
-@media (max-width: 1000px) {
+.aaf-logo{
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: calc(40px + 2rem);
+    width: 100px;
+}
+
+@media (max-width: 1100px) {
     .title-text {
         grid-template-areas:
                 "t-11 t-12 t-13"
@@ -187,9 +195,14 @@ h1 {
         position: absolute;
         max-height: 500px;
     }
+
+    .aaf-logo{
+        bottom: calc(40px + 9rem);
+        width: 100px;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     body, html {
         font-size: 80%;
     }
@@ -224,5 +237,10 @@ h1 {
     .logo img {
         height: 20px;
         width: auto;
+    }
+
+    .aaf-logo{
+        bottom: calc(40px + 7rem);
+        width: 70px;
     }
 }

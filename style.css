@@ -43,7 +43,7 @@ h1 {
     margin: 0;
     text-transform: uppercase;
     line-height: 100%;
-    color: #848585;
+    color: #919191;
 }
 
 .gradient-background {
@@ -109,7 +109,6 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10000;
     width: 700px;
 }
 
@@ -136,12 +135,12 @@ h1 {
     position: absolute;
     max-height: 500px;
     opacity: 0;
-    transform: translateY(-5px) scale(150%);
+    transform: translateY(-5px);
     transition: all 400ms ease-out;
 }
 #svg-container-infos img.visible {
     opacity: 1;
-    transform: translateY(0) scale(150%);
+    transform: translateY(0);
     transition: all 400ms ease-out;
 }
 

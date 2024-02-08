@@ -86,8 +86,8 @@ function setInfoSVGs() {
 
     function placeSVG(svgFile) {
         const name = svgFile.name;
-        const width = isMobile() ? svgFile.width * 0.8 : svgFile.width
-        const height = isMobile() ? svgFile.height * 0.8 : svgFile.height
+        const width = isMobile() ? svgFile.width * 1.2: svgFile.width * 1.4
+        const height = isMobile() ? svgFile.height * 1.2 : svgFile.height * 1.4
 
         const svgPath = basePath + name;
 

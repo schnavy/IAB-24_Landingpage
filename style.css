@@ -58,7 +58,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 700px;
+    width: 800px;
 }
 
 #svg-container img {
@@ -148,7 +148,7 @@ h1 {
     }
 
     #svg-container {
-        width: 400px;
+        width: 600px;
     }
 
     #svg-container-infos img {
@@ -157,7 +157,6 @@ h1 {
 
     .aaf-logo {
         bottom: calc(40px + 2rem + 18.5vw);
-        width: 100px;
     }
 }
 

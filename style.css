@@ -55,6 +55,8 @@ h1 {
     transition: background 0.5s; /* Smooth transition for the gradient change */
 }
 
+/*
+
 .title-text {
     padding: 1rem;
     display: grid;
@@ -96,6 +98,26 @@ h1 {
 .hgb-date {
     grid-area: hgb-date;
 }
+*/
+
+.title-text {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}
+
+.title-text img {
+    height: 150px;
+}
+
+.col-1 img {
+    height: 33.333%;
+}
+
+.title-text-mobile {
+    display: none;
+}
 
 .lower-text {
     position: absolute;
@@ -105,6 +127,10 @@ h1 {
     justify-content: space-between;
 }
 
+.lower-text img {
+    width: 100%;
+}
+
 #svg-container {
     position: absolute;
     top: 0;
@@ -112,12 +138,13 @@ h1 {
     width: 700px;
 }
 
-#svg-container img{
+#svg-container img {
     opacity: 0;
     transform: translateY(20px);
     transition-delay: 1000ms;
     transition: all 1000ms ease-out;
 }
+
 #svg-container img.visible {
     opacity: 1;
     transition-delay: 1000ms;
@@ -129,6 +156,10 @@ h1 {
     display: none;
     z-index: 10000;
     padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(40px + 2rem + 14vw);
 }
 
 #svg-container-infos img {
@@ -138,6 +169,7 @@ h1 {
     transform: translateY(-5px);
     transition: all 400ms ease-out;
 }
+
 #svg-container-infos img.visible {
     opacity: 1;
     transform: translateY(0);
@@ -161,7 +193,7 @@ h1 {
     width: auto;
 }
 
-.aaf-logo{
+.aaf-logo {
     position: absolute;
     left: 1rem;
     right: 1rem;
@@ -170,11 +202,14 @@ h1 {
 }
 
 @media (max-width: 1100px) {
+    /*    .title-text {
+            grid-template-areas:
+                    "t-11 t-12 t-13"
+                    ".    t-21 t-22"
+                    ".     t-31 t-32";
+        }*/
     .title-text {
-        grid-template-areas:
-                "t-11 t-12 t-13"
-                ".    t-21 t-22"
-                ".     t-31 t-32";
+        grid-template-columns: repeat(3, auto);
     }
 
     .lower-text {
@@ -183,6 +218,10 @@ h1 {
     }
 
     .hgb-date {
+        display: none;
+    }
+
+    .col-4 {
         display: none;
     }
 
@@ -195,8 +234,8 @@ h1 {
         max-height: 500px;
     }
 
-    .aaf-logo{
-        bottom: calc(40px + 9rem);
+    .aaf-logo {
+        bottom: calc(40px + 2rem + 18.5vw);
         width: 100px;
     }
 }
@@ -206,13 +245,20 @@ h1 {
         font-size: 80%;
     }
 
-    .title-text {
+    /*.title-text {
         grid-template-areas:
             "t-11 t-12 t-13"
             ".    t-21 t-21"
             ".    .    t-22"
             ".    t-31 t-31"
             ".    .    t-32";
+    }*/
+    .title-text {
+        display: none;
+    }
+
+    .title-text-mobile {
+        display: block;
     }
 
     .lower-text {
@@ -238,8 +284,8 @@ h1 {
         width: auto;
     }
 
-    .aaf-logo{
-        bottom: calc(40px + 7rem);
+    .aaf-logo {
+        bottom: calc(20px + 2rem + 18.5vw);
         width: 70px;
     }
 }

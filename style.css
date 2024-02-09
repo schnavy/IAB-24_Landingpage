@@ -1,35 +1,3 @@
-@font-face {
-    font-family: 'Syncro Mono';
-    src: url('assets/fonts/Syncro-MonoItalic.woff2') format('woff2'),
-    url('assets/fonts/Syncro-MonoItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Syncro Mono';
-    src: url('assets/fonts/Syncro-Mono.woff2') format('woff2'),
-    url('assets/fonts/Syncro-Mono.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Syncro';
-    src: url('assets/fonts/Syncro-Book.woff2') format('woff2'),
-    url('assets/fonts/Syncro-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Syncro';
-    src: url('assets/fonts/Syncro-Italic.woff2') format('woff2'),
-    url('assets/fonts/Syncro-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
 body, html {
     font-family: 'Syncro', serif;
     font-style: normal;
@@ -52,53 +20,8 @@ h1 {
     width: 100%;
     height: 100%;
     z-index: -100;
-    transition: background 0.5s; /* Smooth transition for the gradient change */
+    transition: background 0.5s;
 }
-
-/*
-
-.title-text {
-    padding: 1rem;
-    display: grid;
-    grid-template-areas:
-            "t-11 t-12 t-13 hgb-date"
-            ".    t-21 t-22 hgb-date"
-            ".     t-31 t-32 hgb-date";
-    justify-content: space-between;
-}
-
-.t-11 {
-    grid-area: t-11;
-}
-
-.t-12 {
-    grid-area: t-12;
-}
-
-.t-13 {
-    grid-area: t-13;
-}
-
-.t-21 {
-    grid-area: t-21;
-}
-
-.t-22 {
-    grid-area: t-22;
-}
-
-.t-31 {
-    grid-area: t-31;
-}
-
-.t-32 {
-    grid-area: t-32;
-}
-
-.hgb-date {
-    grid-area: hgb-date;
-}
-*/
 
 .title-text {
     padding: 1rem;
@@ -243,14 +166,6 @@ h1 {
         font-size: 80%;
     }
 
-    /*.title-text {
-        grid-template-areas:
-            "t-11 t-12 t-13"
-            ".    t-21 t-21"
-            ".    .    t-22"
-            ".    t-31 t-31"
-            ".    .    t-32";
-    }*/
     .title-text {
         display: none;
     }

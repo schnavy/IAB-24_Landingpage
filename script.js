@@ -48,11 +48,11 @@ function setBackground(e) {
     const mouseX = e.clientX || window.innerWidth / 2;
     const mouseY = e.clientY || window.innerHeight / 2;
 
-    const xPercent = mouseX / width * 100;
-    const yPercent = mouseY / height * 100;
+    const xPercent = mouseX / width * 40 + 60;
+    const yPercent = mouseY / height * 40;
 
     // Adjust the gradient direction and color stops based on mouse position
-    document.querySelector('.gradient-background').style.background = `linear-gradient(#d9abd2 0%, #ecb4b4 ${yPercent - 40}%, #e67401 ${xPercent + 20}%, #282728 100%)`;
+    document.querySelector('.gradient-background').style.background = `linear-gradient(#d9abd2 0%, #ecb4b4 ${yPercent}%, #e67401 ${xPercent}%, #282728 100%)`;
 }
 
 function setInfoSVGs() {
@@ -86,7 +86,7 @@ function setInfoSVGs() {
 
     function placeSVG(svgFile) {
         const name = svgFile.name;
-        const width = isMobile() ? svgFile.width * 1.2: svgFile.width * 1.4
+        const width = isMobile() ? svgFile.width * 1.2 : svgFile.width * 1.4
         const height = isMobile() ? svgFile.height * 1.2 : svgFile.height * 1.4
 
         const svgPath = basePath + name;

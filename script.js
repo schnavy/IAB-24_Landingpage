@@ -86,8 +86,8 @@ function setInfoSVGs() {
 
     function placeSVG(svgFile) {
         const name = svgFile.name;
-        const width = isMobile() ? svgFile.width * 1.2 : svgFile.width * 1.4
-        const height = isMobile() ? svgFile.height * 1.2 : svgFile.height * 1.4
+        const width = isMobile() ? svgFile.width * 1 : svgFile.width * 1.2
+        const height = isMobile() ? svgFile.height * 1 : svgFile.height * 1.2
 
         const svgPath = basePath + name;
 
@@ -95,8 +95,8 @@ function setInfoSVGs() {
         let attempts = 0;
 
         while (!placed && attempts < maxAttempts) {
-            const x = Math.floor(Math.random() * (window.innerWidth - width));
-            const y = Math.floor(Math.random() * (window.innerHeight - height));
+            const x = Math.floor(Math.random() * ((window.innerWidth- 100) - width)) + 50;
+            const y = Math.floor(Math.random() * ((window.innerHeight - 200) - height)) + 100;
             const delay = Math.random() * 2000;
 
             const testRect = {left: x, top: y, right: x + width, bottom: y + height};

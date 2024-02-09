@@ -164,7 +164,6 @@ h1 {
 
 #svg-container-infos img {
     position: absolute;
-    max-height: 500px;
     opacity: 0;
     transform: translateY(-5px);
     transition: all 400ms ease-out;
@@ -185,11 +184,11 @@ h1 {
     grid-template-columns: repeat(3, min-content);
     align-items: end;
     justify-content: space-between;
-    min-height: 40px;
+    min-height: 33px;
 }
 
 .logo img {
-    height: 40px;
+    height: 33px;
     width: auto;
 }
 
@@ -197,8 +196,8 @@ h1 {
     position: absolute;
     left: 1rem;
     right: 1rem;
-    bottom: calc(40px + 2rem);
-    width: 100px;
+    bottom: calc(33px + 2rem);
+    height: 33px;
 }
 
 @media (max-width: 1100px) {
@@ -231,7 +230,6 @@ h1 {
 
     #svg-container-infos img {
         position: absolute;
-        max-height: 500px;
     }
 
     .aaf-logo {
@@ -276,7 +274,6 @@ h1 {
 
     #svg-container-infos img {
         position: absolute;
-        max-height: 200px;
     }
 
     .logo img {

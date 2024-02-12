@@ -46,7 +46,7 @@ h1 {
     right: 1rem;
 }
 
-.lower-text {
+.lower-text, .lower-text-tablet {
     position: absolute;
     left: 1rem;
     right: 1rem;
@@ -56,6 +56,10 @@ h1 {
 
 .lower-text img {
     width: 100%;
+}
+
+.lower-text-tablet img {
+    height: 150px;
 }
 
 #svg-container {
@@ -138,7 +142,7 @@ h1 {
         grid-template-columns: repeat(3, auto);
     }
 
-    .lower-text {
+    .lower-text-tablet {
         display: flex;
         bottom: calc(40px + 2rem);
     }
@@ -160,7 +164,7 @@ h1 {
     }
 
     .aaf-logo {
-        bottom: calc(40px + 2rem + 18.5vw);
+        bottom: calc(40px + 3rem + 150px);
     }
 }
 
@@ -180,6 +184,10 @@ h1 {
     .lower-text {
         display: flex;
         bottom: calc(20px + 2rem);
+    }
+
+    .lower-text-tablet {
+        display: none;
     }
 
     #svg-container {

@@ -59,7 +59,7 @@ h1 {
 }
 
 .lower-text-tablet img {
-    height: 150px;
+    height: 100px;
 }
 
 #svg-container {
@@ -164,7 +164,7 @@ h1 {
     }
 
     .aaf-logo {
-        bottom: calc(40px + 3rem + 150px);
+        bottom: calc(40px + 3rem + 100px);
     }
 }
 

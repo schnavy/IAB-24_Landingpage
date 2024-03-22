@@ -59,7 +59,7 @@ function setInfoSVGs() {
     const infoSVGFiles = [
         {name: 'info01.svg', width: 33, height: 180},
         {name: 'info02.svg', width: 213, height: 219},
-        {name: 'info03.svg', width: 245, height: 313},
+        {name: 'info03.svg', width: 288, height: 320},
         {name: 'info04.svg', width: 135, height: 272},
         {name: 'info05.svg', width: 177, height: 280},
     ];

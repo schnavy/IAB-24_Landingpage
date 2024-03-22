@@ -1,3 +1,5 @@
+window.location.href = "https://itsabook.de";
+
 document.addEventListener('mousemove', setBackground);
 
 const svgFiles = ['f01.svg', 'f02.svg', 'f03.svg'];
@@ -57,11 +59,11 @@ function setBackground(e) {
 
 function setInfoSVGs() {
     const infoSVGFiles = [
-        {name: 'info01.svg', width: 33, height: 180},
-        {name: 'info02.svg', width: 213, height: 219},
-        {name: 'info03.svg', width: 288, height: 320},
-        {name: 'info04.svg', width: 135, height: 272},
-        {name: 'info05.svg', width: 177, height: 280},
+        { name: 'info01.svg', width: 33, height: 180 },
+        { name: 'info02.svg', width: 213, height: 219 },
+        { name: 'info03.svg', width: 288, height: 320 },
+        { name: 'info04.svg', width: 135, height: 272 },
+        { name: 'info05.svg', width: 177, height: 280 },
     ];
 
     const basePath = 'assets/svg/';
@@ -95,11 +97,11 @@ function setInfoSVGs() {
         let attempts = 0;
 
         while (!placed && attempts < maxAttempts) {
-            const x = Math.floor(Math.random() * ((window.innerWidth- 100) - width)) + 50;
+            const x = Math.floor(Math.random() * ((window.innerWidth - 100) - width)) + 50;
             const y = Math.floor(Math.random() * ((window.innerHeight - 200) - height)) + 100;
             const delay = Math.random() * 2000;
 
-            const testRect = {left: x, top: y, right: x + width, bottom: y + height};
+            const testRect = { left: x, top: y, right: x + width, bottom: y + height };
 
             if (!doesCollide(testRect)) {
                 const imgElement = document.createElement('img');

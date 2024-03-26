@@ -1,4 +1,4 @@
-window.location.href = "https://itsabook.de";
+/*window.location.href = "https://itsabook.de";*/
 
 document.addEventListener('mousemove', setBackground);
 
